@@ -1,5 +1,5 @@
 # Moe's Tavern
-## Beer cellar inventory
+Beer cellar inventory
 
 ### Software, Development
 * Node.js
