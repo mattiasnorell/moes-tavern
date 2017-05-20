@@ -1,0 +1,33 @@
+
+  <td>
+  {{item.count}}  
+</td>
+
+<td>
+  {{item.name}}  
+</td>
+
+<td>
+  {{item.brewery}}  
+</td>
+
+<td>
+  {{item.bestBefore | date: 'yyyy-MM-dd' }}  
+</td>
+
+<td>
+  {{item.createdAt | date: 'yyyy-MM-dd' }}  
+</td>
+
+<td>
+  <span *ngIf="item.archived">x</span>  
+</td>
+
+<td>
+  {{item.upc}} 
+</td>
+
+<td>
+  <button [disabled]="item.archived" (click)="checkOut(item)">Plocka en</button>
+  <button (click)="remove(item)">Ta bort</button>
+</td>

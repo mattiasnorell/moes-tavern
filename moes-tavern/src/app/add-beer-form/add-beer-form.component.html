@@ -1,0 +1,23 @@
+<form #beerForm="ngForm">
+  <label>
+    Namn
+    <input type="text" [(ngModel)]="newBeer.name" name="name" required/>
+  </label>
+
+  <label>
+    Bryggeri
+    <input type="text" [(ngModel)]="newBeer.brewery" name="brewery" required/>
+  </label>
+
+  <label>
+    Bäst före
+    <input type="date" [(ngModel)]="newBeer.bestBefore" name="bestBefore" required/>
+  </label>
+
+  <label>
+    Antal
+    <input type="number" [(ngModel)]="newBeer.count" name="count" required/>
+  </label>
+
+  <button (click)="add()" [disabled]="!beerForm.form.valid">Lägg till</button>
+</form>

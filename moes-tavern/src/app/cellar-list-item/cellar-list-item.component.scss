@@ -1,0 +1,10 @@
+cellar-list-item{
+    .item{
+        float: left;
+        position: relative;
+        
+        &.name{
+            width: 25%;
+        }
+    }
+}
