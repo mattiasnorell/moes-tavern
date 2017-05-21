@@ -1,33 +1,20 @@
-
-  <td>
-  {{item.count}}  
-</td>
-
-<td>
+<div class="list-item name">
   {{item.name}}  
-</td>
+</div>
 
-<td>
+<div class="list-item brewery">
   {{item.brewery}}  
-</td>
+</div>
 
-<td>
+ <div class="list-item count">
+  {{item.count}} st
+</div>
+
+<div class="list-item best-before" [ngClass]="{'past-date': pastDate, 'close-to-date': closeToDate && !pastDate}">
   {{item.bestBefore | date: 'yyyy-MM-dd' }}  
-</td>
+</div>
 
-<td>
-  {{item.createdAt | date: 'yyyy-MM-dd' }}  
-</td>
-
-<td>
-  <span *ngIf="item.archived">x</span>  
-</td>
-
-<td>
-  {{item.upc}} 
-</td>
-
-<td>
-  <button [disabled]="item.archived" (click)="checkOut(item)">Plocka en</button>
-  <button (click)="remove(item)">Ta bort</button>
-</td>
+<div class="list-item action text-right">
+  <button [disabled]="item.archived" (click)="checkOut(item)">-</button>
+  <button (click)="remove(item)">T</button>
+</div>

@@ -1,4 +1,53 @@
 cellar-list{
     position: relative;
+    width: 800px;
     margin: 0 auto;
+    display:block;
+
+    @media only screen and (max-width : 765px) { 
+        width: 100%;
+    }
+
+    .list-header{
+        float: left;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        line-height: 32px;
+        font-weight: bold;
+
+        @media only screen and (max-width : 765px) { 
+            font-size: 11px;
+        }
+
+        &.name, &.brewery{
+            width: 30%;
+
+            @media only screen and (max-width : 765px) { 
+                width: 35%;
+            }   
+        }
+
+        &.count{
+            width: 15%;
+
+            @media only screen and (max-width : 765px) { 
+                width: 10%;
+            }   
+        }
+
+        &.best-before{
+            width: 15%;
+
+            @media only screen and (max-width : 765px) { 
+                display: none;
+            }    
+        }
+
+        &.action{
+            width: 10%;
+            @media only screen and (max-width : 765px) { 
+                width: 20%;
+            }   
+        }
+    }
 }

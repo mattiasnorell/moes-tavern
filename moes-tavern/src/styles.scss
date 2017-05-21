@@ -1,5 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app/add-beer/add-beer.component.scss";
+@import "app/add-beer-form/add-beer-form.component.scss";
+@import "app/cellar-list/cellar-list.component.scss";
+@import "app/cellar-list-item/cellar-list-item.component.scss";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+
+    @media only screen and (max-width : 765px) { 
+        font-size: 24px;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        background: #000;
+        width: 60px;
+        height: 3px;
+        margin: 20px auto 14px auto;
+    }
+}
 
 .text-center{
     text-align: center;
+}
+
+.text-right{
+    text-align: right;
 }

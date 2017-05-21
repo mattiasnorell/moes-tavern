@@ -1,10 +1,54 @@
 cellar-list-item{
-    .item{
+    
+    .list-item{
         float: left;
         position: relative;
-        
-        &.name{
-            width: 25%;
+        border-bottom: 1px solid #eee;
+        line-height: 32px;
+        font-size: 14px;
+
+        @media only screen and (max-width : 765px) { 
+            font-size: 11px;
+        }
+
+        &.name, &.brewery{
+            width: 30%;
+
+            @media only screen and (max-width : 765px) { 
+                width: 35%;
+            }   
+        }
+
+        &.count{
+            width: 15%;
+
+            @media only screen and (max-width : 765px) { 
+                width: 10%;
+            }   
+        }
+
+        &.best-before{
+            width: 15%;
+
+            &.past-date{
+                color: red;
+            }
+
+            &.close-to-date{
+                color: orange;
+            }
+            
+            @media only screen and (max-width : 765px) { 
+                display: none;
+            }    
+        }
+
+        &.action{
+            width: 10%;
+
+            @media only screen and (max-width : 765px) { 
+                width: 20%;
+            }   
         }
     }
 }

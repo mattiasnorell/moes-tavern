@@ -1,36 +1,22 @@
-<table>
-    <tr>
-      <th>
-        Antal 
-      </th>
 
-      <th>
-        Namn 
-      </th>
+<div class="list-header name">
+  Namn 
+</div>
 
-      <th>
-        Bryggeri 
-      </th>
+<div class="list-header brewery">
+  Bryggeri 
+</div>
 
-      <th>
-        Bäst före
-      </th>
+ <div class="list-header count">
+  Antal
+</div>
 
-      <th>
-        Tillagd
-      </th>
+<div class="list-header best-before">
+  Bäst före
+</div>
 
-      <th>
-        Arkiverad
-      </th>
+<div class="list-header action">
+   &nbsp;
+</div>
 
-      <th>
-        UPC
-      </th>
-
-      <th></th>
-    </tr>
-
-    <tr cellar-list-item *ngFor="let cellarItem of cellarItems | async" [item]="cellarItem"></tr>
-
-</table>
+<cellar-list-item *ngFor="let cellarItem of cellarItems | async" [item]="cellarItem"></cellar-list-item>
