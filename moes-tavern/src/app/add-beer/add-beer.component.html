@@ -1,3 +1,3 @@
-<button (click)="manually()">Lägg till ny</button>
+<button (click)="manually()" *ngIf="authService.isAuthenticated()" >Lägg till ny</button>
 
-<add-beer-form *ngIf="showForm"></add-beer-form>
+<add-beer-form *ngIf="showForm" (onAdded)="onAdded($event)"></add-beer-form>

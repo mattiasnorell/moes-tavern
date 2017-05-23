@@ -20,7 +20,7 @@ cellar-list-item{
         }
 
         &.count{
-            width: 15%;
+            width: 10%;
 
             @media only screen and (max-width : 765px) { 
                 width: 10%;
@@ -44,11 +44,20 @@ cellar-list-item{
         }
 
         &.action{
-            width: 10%;
+            width: 15%;
 
             @media only screen and (max-width : 765px) { 
                 width: 20%;
             }   
         }
+
+    }
+
+    .more-information{
+        position: relative;
+        float:left;
+        width: 100%;
+        background: lightgrey;
+        border-bottom: 3px solid #eee;
     }
 }

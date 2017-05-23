@@ -1,7 +1,8 @@
 import { ICellarItem } from "app/icellar-item";
 
 export class CellarItem implements ICellarItem {
-    $key:string;
+    id:string;
+    userId: string;
     name:string;
     brewery: string;
     bestBefore: number;

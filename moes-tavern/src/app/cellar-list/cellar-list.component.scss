@@ -28,7 +28,7 @@ cellar-list{
         }
 
         &.count{
-            width: 15%;
+            width: 10%;
 
             @media only screen and (max-width : 765px) { 
                 width: 10%;
@@ -44,7 +44,7 @@ cellar-list{
         }
 
         &.action{
-            width: 10%;
+            width: 15%;
             @media only screen and (max-width : 765px) { 
                 width: 20%;
             }   

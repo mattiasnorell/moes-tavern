@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ICellarItem } from "app/icellar-item";
 import { CellarListService } from "app/cellar-list/cellar-list.service";
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {AngularFireDatabase} from 'angularfire2/database';
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'cellar-list',
@@ -11,7 +12,7 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 })
 export class CellarListComponent implements OnInit {
 
-  cellarItems:FirebaseListObservable<ICellarItem[]>
+  cellarItems:Observable<ICellarItem[]>
   
   constructor(private cellarListService:CellarListService) { 
 

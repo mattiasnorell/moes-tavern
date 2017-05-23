@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { CellarItem } from "app/cellar-item";
 import { CellarListService } from "app/cellar-list/cellar-list.service";
 import { AngularFireDatabase } from "angularfire2/database";
@@ -15,11 +15,16 @@ export class AddBeerFormComponent implements OnInit {
 
   constructor(private cellarListService:CellarListService) { }
 
+  @Output() onAdded = new EventEmitter();
+  
   ngOnInit() {
   }
 
   add(){
     this.newBeer.createdAt = new Date().getTime();
     this.cellarListService.add(this.newBeer);
+
+    this.onAdded.emit();
+
   }
 }

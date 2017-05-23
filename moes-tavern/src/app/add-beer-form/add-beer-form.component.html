@@ -1,22 +1,23 @@
 <form #beerForm="ngForm">
-  <label>
+  
+  <label class="full">
     Namn
     <input type="text" [(ngModel)]="newBeer.name" name="name" required/>
   </label>
 
-  <label>
+  <label class="full">
     Bryggeri
     <input type="text" [(ngModel)]="newBeer.brewery" name="brewery" required/>
   </label>
 
-  <label>
+  <label class="half">
     Bäst före
     <input type="date" [(ngModel)]="newBeer.bestBefore" name="bestBefore" required/>
   </label>
 
-  <label>
+  <label class="half">
     Antal
-    <input type="number" [(ngModel)]="newBeer.count" name="count" required/>
+    <input type="number" pattern="[0-9]*" inputmode="numeric" [(ngModel)]="newBeer.count" name="count" required/>
   </label>
 
   <button (click)="add()" [disabled]="!beerForm.form.valid">Lägg till</button>

@@ -1,5 +1,6 @@
 export interface ICellarItem {
-    $key:string;
+    id:string;
+    userId: string;
     name:string;
     brewery: string;
     bestBefore: number;

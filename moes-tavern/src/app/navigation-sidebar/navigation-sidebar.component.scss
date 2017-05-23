@@ -1,0 +1,26 @@
+navigation-sidebar{
+    .container{
+        position:fixed;
+        display: block;
+        height: 100%;
+        width: 300px;
+        background-color: #ccc;
+        top:0;
+        left: -300px;
+        transition: left .5s;
+        z-index: 10000;
+
+        &.is-open{
+            left:0;
+        }
+
+        .toggle{
+            position:absolute;
+            left: 300px;
+            top: 50px;
+            padding: 15px;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    }
+}

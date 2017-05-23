@@ -11,6 +11,9 @@ import { CellarListComponent } from './cellar-list/cellar-list.component';
 import { CellarListItemComponent } from './cellar-list-item/cellar-list-item.component';
 import { AddBeerComponent } from './add-beer/add-beer.component';
 import { AddBeerFormComponent } from './add-beer-form/add-beer-form.component';
+import { AngularFireAuth } from "angularfire2/auth";
+import { LoginFormComponent } from './login-form/login-form.component';
+import { NavigationSidebarComponent } from './navigation-sidebar/navigation-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { AddBeerFormComponent } from './add-beer-form/add-beer-form.component';
     CellarListComponent,
     CellarListItemComponent,
     AddBeerComponent,
-    AddBeerFormComponent
+    AddBeerFormComponent,
+    LoginFormComponent,
+    NavigationSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { AddBeerFormComponent } from './add-beer-form/add-beer-form.component';
     HttpModule,
     AngularFireModule.initializeApp(FirebaseConfig)
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

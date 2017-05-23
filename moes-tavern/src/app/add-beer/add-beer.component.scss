@@ -1,9 +1,15 @@
 add-beer{
-    text-align: center;
     position: relative;
-    display: block;
+    width: 800px;
+    margin: 0 auto;
+    display:block;
     margin: 0px auto 42px auto;
+    text-align: center;
 
+    @media only screen and (max-width : 765px) { 
+        width: 100%;
+    }
+    
     button{
         background-color: #efefef;
         background-image: none;
