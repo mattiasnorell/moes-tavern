@@ -3,6 +3,7 @@
 @import "app/cellar-list/cellar-list.component.scss";
 @import "app/cellar-list-item/cellar-list-item.component.scss";
 @import "app/navigation-sidebar/navigation-sidebar.component.scss";
+@import "app/login-form/login-form.component.scss";
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -33,4 +34,8 @@ h1{
 
 .text-right{
     text-align: right;
+}
+
+.hidden{
+    display: none;
 }

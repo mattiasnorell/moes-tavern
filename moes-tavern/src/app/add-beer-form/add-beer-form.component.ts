@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { CellarItem } from "app/cellar-item";
 import { CellarListService } from "app/cellar-list/cellar-list.service";
 import { AngularFireDatabase } from "angularfire2/database";
+import { CellarItemForm } from "./cellar-item-form";
 
 @Component({
   selector: 'add-beer-form',
@@ -11,7 +12,7 @@ import { AngularFireDatabase } from "angularfire2/database";
 })
 export class AddBeerFormComponent implements OnInit {
 
-  newBeer = new CellarItem();
+  newBeer = new CellarItemForm();
 
   constructor(private cellarListService:CellarListService) { }
 
@@ -21,8 +22,15 @@ export class AddBeerFormComponent implements OnInit {
   }
 
   add(){
-    this.newBeer.createdAt = new Date().getTime();
-    this.cellarListService.add(this.newBeer);
+    var beer = new CellarItem();
+    beer.archived = false;
+    beer.brewery = this.newBeer.brewery;
+    beer.count = this.newBeer.count;
+    beer.name = this.newBeer.name;
+    beer.createdAt = new Date().getTime();
+    beer.bestBefore = new Date(this.newBeer.bestBefore).getTime();
+    
+    this.cellarListService.add(beer);
 
     this.onAdded.emit();
 

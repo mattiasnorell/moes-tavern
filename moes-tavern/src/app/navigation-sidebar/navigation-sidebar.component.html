@@ -1,6 +1,13 @@
 <div class="container" [ngClass]="{'is-open':isOpen}">
-  <button (click)="logout()" *ngIf="authService.isAuthenticated()" >Logga ut</button>
-  <login-form *ngIf="!authService.isAuthenticated()"></login-form>
+  <login-form></login-form>
 
   <div class="toggle" (click)="toggle()"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></div>
+
+  <ul class="text-center hidden">
+    <li>Ölkällaren</li>
+    <li>Menyalternativ 2</li>
+    <li>Menyalternativ 3</li>
+    <li>Menyalternativ 4</li>
+    <li>Menyalternativ 5</li>
+  </ul>
 </div>

@@ -16,10 +16,6 @@ export class NavigationSidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout(){
-    this.authService.logout();
-  }
-
   toggle(){
     this.isOpen = !this.isOpen;
   }

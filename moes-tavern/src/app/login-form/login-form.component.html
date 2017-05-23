@@ -1,5 +1,17 @@
-<form #loginForm="ngForm">
-  <input type="text" name="username" [(ngModel)]="loginData.username" required/>
-  <input type="password" name="password" [(ngModel)]="loginData.password" required/>
+<form #loginForm="ngForm" *ngIf="!authService.isAuthenticated()">
+  <label>
+    Email
+    <input type="text" name="username" [(ngModel)]="loginData.username" required/>
+  </label>
+  
+  <label>
+      Lösenord
+      <input type="password" name="password" [(ngModel)]="loginData.password" required/>
+  </label>
   <button (click)="login()" [disabled]="!loginForm.form.valid">Logga in</button>
 </form>
+
+<div class="logged-in-user" *ngIf="authService.isAuthenticated()">
+  <p>Inloggad som: {{authService.getUser()?.email}}</p>
+  <button (click)="logout()">Logga ut</button>
+</div>
