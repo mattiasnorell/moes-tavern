@@ -14,6 +14,7 @@ import { AddBeerFormComponent } from './add-beer-form/add-beer-form.component';
 import { AngularFireAuth } from "angularfire2/auth";
 import { LoginFormComponent } from './login-form/login-form.component';
 import { NavigationSidebarComponent } from './navigation-sidebar/navigation-sidebar.component';
+import { FilterListPipePipe } from './filter-list-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavigationSidebarComponent } from './navigation-sidebar/navigation-side
     AddBeerComponent,
     AddBeerFormComponent,
     LoginFormComponent,
-    NavigationSidebarComponent
+    NavigationSidebarComponent,
+    FilterListPipePipe
   ],
   imports: [
     BrowserModule,

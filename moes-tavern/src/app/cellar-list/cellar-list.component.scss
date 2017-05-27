@@ -1,6 +1,6 @@
 cellar-list{
     position: relative;
-    width: 800px;
+    width: 1024px;
     margin: 0 auto;
     display:block;
 
@@ -20,7 +20,7 @@ cellar-list{
         }
 
         &.name, &.brewery{
-            width: 30%;
+            width: 35%;
 
             @media only screen and (max-width : 765px) { 
                 width: 35%;
@@ -36,7 +36,7 @@ cellar-list{
         }
 
         &.best-before{
-            width: 15%;
+            width: 10%;
 
             @media only screen and (max-width : 765px) { 
                 display: none;
@@ -44,10 +44,44 @@ cellar-list{
         }
 
         &.action{
-            width: 15%;
+            width: 10%;
             @media only screen and (max-width : 765px) { 
                 width: 20%;
             }   
+        }
+    }
+
+    .filter-container{
+        position: relative;
+        float: left;
+        width:100%;
+        margin-bottom: 14px;
+    
+        .search{
+            position: relative;
+            float: right;
+
+            i{
+                line-height: 36px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            input{
+                float:right;
+                width: 150px;
+                height: 34px;
+                border: 0;
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 12px;
+                outline: none;
+                font-size: 14px;
+                transition: .5s width;
+                padding-left: 6px;
+
+                &:focus{
+                    width: 200px;
+                }
+            }
         }
     }
 }

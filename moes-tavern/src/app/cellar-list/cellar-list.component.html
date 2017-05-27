@@ -1,3 +1,11 @@
+<div class="filter-container">
+  
+  
+  <div class="search">
+    <i class="fa fa-search"></i>
+    <input type="text" [(ngModel)]="query" />
+  </div>
+</div>
 
 <div class="list-header name">
   Namn 
@@ -19,4 +27,4 @@
    &nbsp;
 </div>
 
-<cellar-list-item *ngFor="let cellarItem of cellarItems | async" [item]="cellarItem"></cellar-list-item>
+<cellar-list-item *ngFor="let cellarItem of cellarItems | async | filterList: query" [item]="cellarItem"></cellar-list-item>
